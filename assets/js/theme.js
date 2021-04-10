@@ -20,11 +20,16 @@ $(document).ready(function(){
     var player = new Vimeo.Player(iframe);
 
     player.on('play', function() {
-        $('.bg-btn').css("display", "none")
+        $('.bg-btn').css("display", "none");
     });
 
     player.on('pause', function() {
-        $('.bg-btn').css("display", "block")
+        $('.bg-btn').css("display", "block");
     });
+
+    $('.bg-btn').click(function(){
+        player.play();
+    });
+    
 });
 
