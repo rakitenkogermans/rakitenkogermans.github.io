@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Germans Rakitenko gr19017
+-->
+<html>
+    <head>
+        <title>Meteorites</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.4.1.min.js"></script>        
+        <script type="text/javascript" src="meteorites.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <style>
+            table, td, th { border: 1px solid gray; border-collapse: collapse;}
+            table { width: 100%; }
+            td:nth-child(3) { display: none; }
+            th:nth-child(3) { display: none; }
+            th { text-transform: uppercase; height: 80px; color: white; background-color: #171717;}
+            tr:hover { background-color: #EFEFEF; }
+            td:nth-child(5), td:nth-child(6), td:nth-child(7) {text-align: right;}
+            ::selection { background-color: #da2600; color: white; }
+            #errmsg{ color: red; }
+            #errmsg2{ color: red; }
+            #errmsg-range{ color: red; }
+            #errmsg2-range{ color: red; }
+        </style>
+    </head>
+    <body onload="CreateTableFromJSON(); createselect()">
+        <h1>Meteorites</h1>
+        <div>
+          <div>
+            <label for="class-select">Class:</label>
+            <select id="class-select" >
+              <option value="default">default
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="year-from">Year from:</label>      
+            <input type="text" id="year-from">
+            <span id="errmsg"></span>
+            <span id="errmsg-range"></span>
+          </div>    
+          <div>
+            <label for="year-until">Year until:</label>      
+            <input type="text" id="year-until">
+            <span id="errmsg2"></span>
+            <span id="errmsg2-range"></span>
+          </div>        
+          <div>
+            <label for="search">Name:</label>      
+            <input type="search" id="search" autocomplete="off">
+          </div>
+          <div id="buttons">
+            <button id="show-list">Show list</button>
+            <button id="hide" onclick="toggleText()">Hide coordinates</button>  
+          </div>
+          <div id="showdata" >           
+          </div>
+        </div>
+    </body>
+</html>
