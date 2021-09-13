@@ -1,4 +1,4 @@
-#Sparkle Heart
+# Sparkle Heart
 
 This project was created as a qualification task to get a practice
 
